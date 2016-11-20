@@ -17,8 +17,7 @@ class TopListFeedContainer extends Component {
         </View>
       );
     } else if (toplists.error === null) {
-      console.log('IM OK');
-      return <TopListFeedScreen toplists={toplists.toplists.toplists} />;
+      return <TopListFeedScreen toplists={toplists.data.toplists} />;
     }
     return (
       <View>

@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
-import { TopListFeedReducer } from '../modules';
+import { TopListFeedReducer, ListReducer } from '../modules';
 
 export default combineReducers({
-  topList: TopListFeedReducer
+  topList: TopListFeedReducer,
+  list: ListReducer
 });

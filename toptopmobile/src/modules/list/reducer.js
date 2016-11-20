@@ -1,4 +1,4 @@
-import { FETCH_TOPLIST_FEED } from './actions';
+import { FETCH_LIST } from './actions';
 
 const INITIAL_STATE = {
   isFetched: false
@@ -6,15 +6,15 @@ const INITIAL_STATE = {
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case `${FETCH_TOPLIST_FEED}_PENDING`:
+    case `${FETCH_LIST}_PENDING`:
       return {};
-    case `${FETCH_TOPLIST_FEED}_FULFILLED`:
+    case `${FETCH_LIST}_FULFILLED`:
       return {
         error: null,
         data: action.payload,
         isFetched: true
       };
-    case `${FETCH_TOPLIST_FEED}_REJECTED`:
+    case `${FETCH_LIST}_REJECTED`:
       return {
         error: action.payload,
         data: null,
