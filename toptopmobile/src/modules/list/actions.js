@@ -4,7 +4,7 @@ export const FETCH_LIST = 'FETCH_LIST';
 
 export const fetchList = id => {
   const promise = new Promise((resolve, reject) => {
-    fetch(`172.20.10.2/toplists/${id}`, {
+    fetch(`${serverConfig.ROOT_URL}/toplists/${id}`, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
